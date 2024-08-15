@@ -39,6 +39,7 @@ function Create() {
   return (
     <div className="scroller bg-black ">
       <div className="h-screen">
+      <h1 className="text-lg font-medium text-white text-center py-[30px]">Complete the process to list your organisation</h1>
         <form
           className="flex flex-col items-start ml-40 mr-40 my-5 dark mb-10 py-[50px]"
           onSubmit={handleSubmit}
@@ -140,7 +141,7 @@ function Create() {
           </div>
 
           <button
-            className="text-white mt-6 border border-purple-600 focus:ring-4 font-medium rounded-lg text-sm  mx-auto px-10 py-2.5 text-center bg-transparent dark:focus:ring-blue-800 "
+            className="text-white mt-6 border border-blue-400 focus:ring-4 font-medium rounded-lg text-sm  mx-auto px-10 py-2.5 text-center bg-transparent dark:focus:ring-blue-800 "
             type="submit"
             disabled={submitState !== 0}
           >

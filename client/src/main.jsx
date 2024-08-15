@@ -8,6 +8,7 @@ import {
   createRoutesFromElements,
   BrowserRouter,
 } from "react-router-dom";
+import {NextUIProvider} from '@nextui-org/react'
 import { Route } from "react-router-dom";
 import Home from './components/Home.jsx'
 import Navbar from './components/Navbar.jsx'
@@ -28,7 +29,9 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+  <NextUIProvider>
    <Navbar/>
    <RouterProvider router={router} />
+   </NextUIProvider>
   </StrictMode>,
 )

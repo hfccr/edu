@@ -1,20 +1,27 @@
-import React from 'react'
+import React from 'react';
+import { Card, CardHeader, CardBody } from "@nextui-org/card";
 
-const organisations = [
-  {
-    name: 'Org A',
-    description: 'Description of Org A. They offer courses in blockchain technology, AI, and more.',
-  },
-  {
-    name: 'Org B',
-    description: 'Description of Org B. Specializes in web development, cloud computing, and data science.',
-  },
-  {
-    name: 'Org C',
-    description: 'Description of Org C. Focuses on financial technologies, cybersecurity, and big data.',
-  },
-  // Add more organizations as needed
-];
+const DailyMixCard = () => {
+  return (
+    <Card className="py-4 bg-green-200">
+      <CardBody className="overflow-visible py-2">
+        <img
+          alt="Card background"
+          className="object-cover rounded-xl"
+          src="https://nextui.org/images/hero-card-complete.jpeg"
+          width={270}
+        />
+      </CardBody>
+      <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+      <h4 className="font-bold text-large">Music art </h4>
+      <p className="text-tiny uppercase font-bold">Our  organisation helps you to learn different types of music</p>
+      <small className="text-default-500 font-medium mt-[30px]">12 Tracks</small>
+      <h4 className="font-bold text-large">Category:Music</h4>
+      
+    </CardHeader>
+    </Card>
+  );
+};
 
 const Organisation = () => {
   return (
@@ -22,20 +29,13 @@ const Organisation = () => {
       <h1 className="text-white text-4xl font-bold text-center mb-8">
         Listed Organisations
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {organisations.map((org, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-semibold mb-2 text-blue-500">
-              {org.name}
-            </h2>
-            <p className="text-gray-700">
-              {org.description}
-            </p>
-          </div>
-        ))}
+      <div className="flex justify-center gap-x-12">
+        <DailyMixCard />
+        <DailyMixCard />
+        <DailyMixCard />
       </div>
     </div>
-  )
+  );
 }
 
-export default Organisation
+export default Organisation;
