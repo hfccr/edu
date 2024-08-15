@@ -11,11 +11,13 @@ import {
 import { Route } from "react-router-dom";
 import Home from './components/Home.jsx'
 import Navbar from './components/Navbar.jsx'
+import Landing from './components/Landing.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route path="/" element={<Home />} />
+      <Route path='/landing' element={<Landing/>}/>
     </Route>
   )
 );
