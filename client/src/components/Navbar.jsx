@@ -10,7 +10,7 @@ const gradientStyle = {
 const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50">
-      <div className="flex flex-row mx-auto px-[40px] py-[20px] justify-between items-center bg-blue-500">
+      <div className="flex flex-row mx-auto px-[40px] py-[20px] justify-between items-center bg-blue-600">
         <div className="flex flex-row items-center font-bold text-2xl text-white">
           <a href="/">EDU</a>
         </div>
