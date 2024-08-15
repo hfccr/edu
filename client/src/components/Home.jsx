@@ -10,7 +10,7 @@ const Home = () => {
         Our DAO helps organizations register and enables students to learn from institutes while earning rewards. Join us to be part of a decentralized future where learning and growth go hand in hand.
       </p>
       <div className='flex gap-x-6 mb-12'>
-        <a href='#' className='bg-green-300 text-blue-500 font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-100 transition duration-300'>
+        <a href='/organisation-listing' className='bg-green-300 text-blue-500 font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-100 transition duration-300'>
           Join as Institute
         </a>
         <a href='#' className='bg-green-300 text-blue-500 font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-100 transition duration-300'>
