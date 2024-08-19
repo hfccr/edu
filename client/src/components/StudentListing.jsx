@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function StudentListing() {
   const [formData, setFormData] = useState({
     name: "",
-    address:"",
+    description:"",
   });
   const [submitState, setSubmitState] = useState(0);
 
@@ -35,7 +35,7 @@ function StudentListing() {
   return (
     <div className="scroller bg-black ">
       <div className="h-screen">
-      <h1 className="text-lg font-medium text-white text-center py-[30px]">Complete the process to register as student</h1>
+      <h1 className="text-lg font-medium text-blue-400 text-center py-[30px]">Complete the process to register as student</h1>
         <form
           className="flex flex-col items-start ml-40 mr-40 my-5 dark mb-10 py-[50px]"
           onSubmit={handleSubmit}
@@ -64,18 +64,18 @@ function StudentListing() {
           <input
             type="text"
             name="name"
-            value={formData.address}
+            value={formData.description}
             onChange={handleChange}
-            id="eventName"
+            id="description"
             className="block py-2.5 px-0 w-full text-sm text-white-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
             required
           />
           <label
-            htmlFor="eventName"
+            htmlFor="description"
             className="peer-focus:font-medium absolute text-sm text-gray-400  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
-            Wallet address
+          Description
           </label>
         </div>
           <div
