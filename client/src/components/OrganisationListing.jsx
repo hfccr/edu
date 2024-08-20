@@ -5,6 +5,7 @@ function Create() {
     name: "",
     course: "",
     region: "",
+    files: [],
     redirectUrl: "",
   });
   const [submitState, setSubmitState] = useState(0);
@@ -14,6 +15,14 @@ function Create() {
     setFormData({
       ...formData,
       [name]: value,
+    });
+  };
+
+  const handleFileChange = async (e) => {
+    const files = Array.from(e.target.files);
+    setFormData({
+      ...formData,
+      files: files,
     });
   };
 
@@ -142,6 +151,37 @@ function Create() {
             </span>{" "}
             The above spending limit is for one time/single campaign 🤯 😎
           </div>
+
+          <div className="mb-6">
+          <label
+            className="block mb-2 text-sm font-medium text-gray-400"
+            htmlFor="file_input"
+          >
+            Upload files
+          </label>
+          <hr className="text-gray-600" />
+          <input
+            type="file"
+            name="files"
+            required
+            multiple
+            onChange={handleFileChange}
+            className="mt-[20px] border-2 border-transparent"
+          />
+          <br />
+          {formData.files.length > 0 && (
+            <div className="grid grid-cols-10 gap-3">
+              {formData.files.map((file, index) => (
+                <img
+                  key={index}
+                  src={URL.createObjectURL(file)}
+                  alt={`Uploaded File ${index + 1}`}
+                  style={{ width: "100px", marginTop: "10px" }}
+                />
+              ))}
+            </div>
+          )}
+        </div>
 
           <button
             className="text-white mt-6 border border-blue-400 focus:ring-4 font-medium rounded-lg text-sm  mx-auto px-10 py-2.5 text-center bg-transparent dark:focus:ring-blue-800 "
