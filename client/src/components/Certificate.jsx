@@ -14,20 +14,20 @@ const DailyMixCard = () => {
       </CardBody>
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
       <h4 className="font-bold text-medium">Name :</h4>
-      <p className="text-tiny uppercase font-bold mt-[20px]">course url :</p>
+      <button className="text-tiny uppercase font-bold mt-[20px] border border-2 rounded-md px-[4px] py-[1px]
+      bg-blue-600 text-white">mint</button>
      
-      <h4 className="font-bold text-tiny">Category:Music</h4>
       
     </CardHeader>
     </Card>
   );
 };
 
-const Organisation = () => {
+const Certificate = () => {
   return (
     <div className="min-h-screen bg-blue-400 py-10 px-6">
       <h1 className="text-black text-xl font-bold text-center mb-8">
-        Listed Organisations
+        Your courses & certificates
       </h1>
       <div className="flex justify-center gap-x-12">
         <DailyMixCard />
@@ -38,4 +38,4 @@ const Organisation = () => {
   );
 }
 
-export default Organisation;
+export default Certificate;
