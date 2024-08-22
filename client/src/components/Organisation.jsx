@@ -3,7 +3,7 @@ import { Card, CardHeader, CardBody } from "@nextui-org/card";
 
 const DailyMixCard = () => {
   return (
-    <Card className="py-4 bg-green-300">
+    <Card className="py-4 bg-green-300 shadow shadow-lg shadow-blue-700">
       <CardBody className="overflow-visible py-2">
         <img
           alt="Card background"
@@ -13,10 +13,10 @@ const DailyMixCard = () => {
         />
       </CardBody>
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-      <h4 className="font-bold text-large">Music art </h4>
-      <p className="text-tiny uppercase font-bold">Our  organisation helps you to learn different types of music</p>
-      <small className="text-default-500 font-medium mt-[30px]">12 Tracks</small>
-      <h4 className="font-bold text-large">Category:Music</h4>
+      <h4 className="font-bold text-large">Name :</h4>
+      <p className="text-tiny uppercase font-bold mt-[20px]">course url :</p>
+     
+      <h4 className="font-bold text-tiny">Category:Music</h4>
       
     </CardHeader>
     </Card>
@@ -26,7 +26,7 @@ const DailyMixCard = () => {
 const Organisation = () => {
   return (
     <div className="min-h-screen bg-blue-400 py-10 px-6">
-      <h1 className="text-black text-2xl font-bold text-center mb-8">
+      <h1 className="text-black text-xl font-bold text-center mb-8">
         Listed Organisations
       </h1>
       <div className="flex justify-center gap-x-12">

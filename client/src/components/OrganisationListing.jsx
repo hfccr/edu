@@ -1,14 +1,16 @@
 import React, { useState } from "react";
+import { uploadToIPFS } from "./ipfsUpload";
 
 function Create() {
   const [formData, setFormData] = useState({
     name: "",
     course: "",
     region: "",
-    files: [],
+    files:[],
     redirectUrl: "",
   });
   const [submitState, setSubmitState] = useState(0);
+  const [ipfsLinks, setIpfsLinks] = useState([]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,6 +19,7 @@ function Create() {
       [name]: value,
     });
   };
+
 
   const handleFileChange = async (e) => {
     const files = Array.from(e.target.files);
