@@ -1,6 +1,36 @@
 import React from 'react';
 import { Card, CardHeader, CardBody } from "@nextui-org/card";
 
+import { TypewriterEffectSmooth } from "../components/ui/typewriter-effect";
+
+export function TypewriterEffectSmoothDemo() {
+    const words = [
+      {
+        text: "Your",
+        className:"text-md"
+      },
+      {
+        text: "courses",
+        className: "text-blue-700",
+      },
+      {
+        text: "and",
+      },
+     
+      {
+        text: "certificates.",
+        className: "text-blue-700",
+      },
+    ];
+    return (
+      <div className="flex flex-col items-center justify-center h-[30px]  ">
+        <TypewriterEffectSmooth words={words} />
+   
+      </div>
+    );
+  }
+
+
 const DailyMixCard = () => {
   return (
     <Card className="py-4 bg-green-300 shadow shadow-lg shadow-blue-700">
@@ -26,15 +56,15 @@ const DailyMixCard = () => {
 const Certificate = () => {
   return (
     <div className="min-h-screen bg-blue-400 py-10 px-6">
-      <h1 className="text-black text-xl font-bold text-center mb-8">
-        Your courses & certificates
-      </h1>
-      <div className="flex justify-center gap-x-12">
-        <DailyMixCard />
-        <DailyMixCard />
-        <DailyMixCard />
-      </div>
+    <h1 className="text-black text-xl font-bold text-center mb-8">
+    <TypewriterEffectSmoothDemo/>
+    </h1>
+    <div className="flex justify-center gap-x-12">
+      <DailyMixCard />
+      <DailyMixCard />
+      <DailyMixCard />
     </div>
+  </div>
   );
 }
 
