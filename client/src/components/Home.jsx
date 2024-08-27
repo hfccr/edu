@@ -1,10 +1,32 @@
 import React from 'react'
 
+import { TypewriterEffectSmooth } from "../components/ui/typewriter-effect";
+
+export function TypewriterEffectSmoothDemo() {
+  const words = [
+    {
+      text: "Welcome to our platform for  ",
+      className:"text-4xl"
+    },
+
+    {
+      text: "Learning & Earning .",
+      className: "text-blue-700 text-4xl  ",
+    },
+  ];
+  return (
+    <div className="flex flex-col items-center justify-center h-[30px]  ">
+      <TypewriterEffectSmooth words={words} />
+ 
+    </div>
+  );
+}
+
 const Home = () => {
   return (
     <div className='min-h-screen bg-blue-500 flex flex-col justify-center items-center text-white text-center px-6'>
       <h1 className='text-4xl font-bold mb-6 mt-[50px]'>
-        Welcome to Our DAO
+        <TypewriterEffectSmoothDemo/>
       </h1>
 
       <p className='text-xl mb-8 max-w-2xl'>

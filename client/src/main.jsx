@@ -17,6 +17,7 @@ import Organisation from './components/Organisation.jsx';
 import OrganisationListing from './components/OrganisationListing.jsx';
 import StudentListing from './components/StudentListing.jsx';
 import Certificate from './components/Certificate.jsx';
+import OrganisationInfo from './components/OrganisationInfo.jsx'
 
 import '@rainbow-me/rainbowkit/styles.css';
 
@@ -55,6 +56,7 @@ const router = createBrowserRouter(
       <Route path='/organisation-listing' element={<OrganisationListing/>}/>
       <Route path='/student-listing' element={<StudentListing/>}/>
       <Route path='/certificate' element={<Certificate/>}/>
+      <Route path='/org-info' element={<OrganisationInfo/>}/>
     </Route>
   )
 );
