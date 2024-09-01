@@ -43,7 +43,7 @@ import {
 const config = getDefaultConfig({
   appName: 'My RainbowKit App',
   projectId: 'e7fa7d19fd057ecd9403a0e89bd62b8b',
-  chains: [mainnet, polygon, optimism, arbitrum, base],
+  chains: [mainnet, polygon, optimism, arbitrum, base ],
   ssr: false
 });
 

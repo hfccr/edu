@@ -1,105 +1,72 @@
 import React, { useState } from 'react';
 
 const OrganisationInfo = () => {
-  const [searchQuery, setSearchQuery] = useState('');
   const [selectedCourse, setSelectedCourse] = useState(null);
 
-  const organisations = [
-    {
-      id: 1,
-      name: 'mETA',
-      description: 'Description of Organization A',
-      courses: [
-        {
-          id: 101,
-          name: 'Course 1',
-          students: ['Alice', 'Bob', 'Charlie'],
-        },
-        {
-          id: 102,
-          name: 'Course 2',
-          students: ['David', 'Eve'],
-        },
-      ],
-    },
-    {
-      id: 2,
-      name: 'Organization B',
-      description: 'Description of Organization B',
-      courses: [
-        {
-          id: 201,
-          name: 'Course 3',
-          students: ['Frank', 'Grace'],
-        },
-      ],
-    },
-    // Add more organizations here
-  ];
-
-  // Filter organisations based on search query
-  const filteredOrganisations = organisations.filter((org) =>
-    org.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const organisation = {
+    id: 1,
+    name: 'WebDev Pro',
+    description: 'A premier organization offering top-notch web development courses.',
+    courses: [
+      {
+        id: 101,
+        name: 'Web Development Fundamentals',
+        students: [
+          { name: 'Alice', walletAddress: '0xA1B2C3D4E5F67890A1B2C3D4E5F67890A1B2C3D4' },
+          { name: 'Bob', walletAddress: '0xB2C3D4E5F67890A1B2C3D4E5F67890A1B2C3D4E5' },
+          { name: 'Charlie', walletAddress: '0xC3D4E5F67890A1B2C3D4E5F67890A1B2C3D4E5F6' },
+        ],
+      },
+      {
+        id: 102,
+        name: 'Advanced JavaScript',
+        students: [
+          { name: 'David', walletAddress: '0xD4E5F67890A1B2C3D4E5F67890A1B2C3D4E5F678' },
+          { name: 'Eve', walletAddress: '0xE5F67890A1B2C3D4E5F67890A1B2C3D4E5F67890' },
+        ],
+      },
+    ],
+  };
 
   const handleCourseClick = (course) => {
     setSelectedCourse(course);
   };
 
   return (
-    <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4">Registered Organisations</h2>
-      
-      {/* Search Box */}
-      <input
-        type="text"
-        placeholder="Search by organisation name..."
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-        className="w-full p-2 mb-4 border rounded-lg"
-      />
+    <div className="min-h-screen bg-blue-400 py-10 px-6">
+      <h2 className="text-2xl font-bold mb-4 text-center text-black">WebDev Pro Organisation</h2>
 
-      {/* Organisation Table */}
-      <table className="min-w-full bg-white">
-        <thead className="bg-gray-200">
-          <tr>
-            <th className="py-2 px-4 border">Organisation Name</th>
-            <th className="py-2 px-4 border">Description</th>
-            <th className="py-2 px-4 border">Courses</th>
-          </tr>
-        </thead>
-        <tbody>
-          {filteredOrganisations.map((org) => (
-            <tr key={org.id}>
-              <td className="py-2 px-4 border">{org.name}</td>
-              <td className="py-2 px-4 border">{org.description}</td>
-              <td className="py-2 px-4 border">
-                <div className="grid grid-cols-1 gap-4">
-                  {org.courses.map((course) => (
-                    <div
-                      key={course.id}
-                      onClick={() => handleCourseClick(course)}
-                      className="cursor-pointer p-2 border rounded-lg bg-blue-200 hover:bg-blue-300"
-                    >
-                      {course.name}
-                    </div>
-                  ))}
-                </div>
-              </td>
-            </tr>
+      {/* Organisation Info */}
+      <div className="bg-green-300 p-4 rounded-lg shadow-lg">
+        <h3 className="text-xl font-semibold mb-2 text-blue-700">{organisation.name}</h3>
+        <p className="mb-4 text-black">{organisation.description}</p>
+
+        {/* Course List */}
+        <h4 className="text-lg font-semibold mb-2 text-black">Courses Offered:</h4>
+        <div className="grid grid-cols-1 gap-4">
+          {organisation.courses.map((course) => (
+            <div
+              key={course.id}
+              onClick={() => handleCourseClick(course)}
+              className="cursor-pointer p-2 border rounded-lg bg-blue-500 text-white hover:bg-blue-600"
+            >
+              {course.name}
+            </div>
           ))}
-        </tbody>
-      </table>
+        </div>
+      </div>
 
       {/* Selected Course Students */}
       {selectedCourse && (
         <div className="mt-6 p-4 border rounded-lg bg-gray-100">
-          <h3 className="text-xl font-semibold mb-2">
+          <h3 className="text-xl font-semibold mb-2 text-black">
             Students Enrolled in {selectedCourse.name}
           </h3>
-          <ul className="list-disc pl-5">
+          <ul className="list-disc pl-5 text-black">
             {selectedCourse.students.map((student, index) => (
-              <li key={index}>{student}</li>
+              <li key={index}>
+                {student.name} - {student.walletAddress}
+              </li>
             ))}
           </ul>
         </div>

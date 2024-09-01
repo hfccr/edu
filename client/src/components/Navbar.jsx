@@ -29,12 +29,6 @@ const Navbar = () => {
           <h1 className="font-medium text-xxl text-white">
             <a href="/landing">Join Us</a>
           </h1>
-          <h1 className="font-medium text-xxl text-white">
-          <a href="/org-info">OrgInfo</a>
-        </h1>
-        <h1 className="font-medium text-xxl text-white">
-        <a href="/stu-info">StudentInfo</a>
-      </h1>
         </div>
 
         <div className="text-white">
