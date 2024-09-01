@@ -59,9 +59,13 @@ To set up the Edu-Academy platform locally, follow these steps:
 ## Tech Stack
 
 - **Frontend:** React, Tailwind CSS
--
 - **Blockchain:** EduChain Blockchain, Solidity (Smart Contracts)
 - **Tools:** Typewriter Effect, Responsive Design
+
+## Blockchain Addresses
+
+- **Student Contract Address:** `0xE34E4F199DbcA54c8121c2A08b2EA30Ce845e54f`
+- **Organization Contract Address:** `0xB0Cba181549B410056b11FbE18213BF236769401`
 
 ## Contributing
 
@@ -75,10 +79,6 @@ We welcome contributions to improve the Edu-Academy platform. To contribute:
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-
-
-
 
 ---
 
