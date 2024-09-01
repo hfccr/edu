@@ -6,11 +6,11 @@ import { TypewriterEffectSmooth } from "../components/ui/typewriter-effect";
 export function TypewriterEffectSmoothDemo() {
   const words = [
     {
-      text: "Listed organisation for ",
+      text: "Listed courses you ",
       className: "text-md"
     },
     {
-      text: "Learning & Earning .",
+      text: "enrolled .",
       className: "text-blue-700",
     },
   ];
@@ -41,19 +41,13 @@ const DailyMixCard = ({ name, category, url, image }) => {
   );
 };
 
-const Organisation = () => {
+const Courses = () => {
   return (
     <div className="min-h-screen bg-blue-400 py-10 px-6">
       <h1 className="text-black text-xl font-bold text-center mb-8">
         <TypewriterEffectSmoothDemo />
       </h1>
       <div className="flex justify-center gap-x-12">
-        <DailyMixCard
-          name="WebDev Pro"
-          category="WebDev"
-          url="https://www.webdevpro.com"
-          image="https://images.unsplash.com/photo-1505685296765-3a2736de412f"
-        />
         <DailyMixCard
         name="Music Academy"
         category="Music"
@@ -71,4 +65,4 @@ const Organisation = () => {
   );
 }
 
-export default Organisation;
+export default Courses;
