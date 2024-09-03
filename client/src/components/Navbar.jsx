@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50">
       <div className="flex flex-row mx-auto px-[40px] py-[20px] justify-between items-center bg-blue-600">
         <div className="flex flex-row items-center font-bold text-2xl text-white">
-          <a href="/">EDU</a>
+          <a href="/">EDU-Academy</a>
         </div>
 
         <div className="flex-1 flex justify-center items-center space-x-8">
